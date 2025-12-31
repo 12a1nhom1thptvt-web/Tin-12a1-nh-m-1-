@@ -1,0 +1,21 @@
+body {
+    background-color: #d32f2f; /* Màu đỏ may mắn */
+    color: #ffeb3b; /* Màu vàng tài lộc */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+header { padding: 50px 0; }
+
+#countdown {
+    font-size: 24px;
+    background: #b71c1c;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.video-container, .audio-container { margin: 30px 0; }
+
+iframe { border: 5px solid #ffeb3b; border-radius: 15px; }
