@@ -1,84 +1,114 @@
-:root {
-    --gold: #ffd700;
-    --red: #d32f2f;
-    --deep-red: #8b0000;
-}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mừng Xuân Bính Ngọ 2026 - Nhóm 2</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="pc-container">
+  <a class="class-img" href="/">
+    <img class="class-img" src="i.imgur.com" alt="logo">
+  </a>
+  
+  <div class="pc-menu">
+    <a href="trangchu.html" style="text-decoration: none;"><h4 class="text-pc">Trang Chủ</h4></a>
+    <a href="phongtuc.html" style="text-decoration: none;"><h4 class="text-pc">Phong Tục</h4></a>
+    <a href="chucmung.html" style="text-decoration: none;"><h4 class="text-pc">Lời Chúc</h4></a>
+    <a href="video.html" style="text-decoration: none;"><h4 class="text-pc">Videos</h4></a>
+  </div>
+</div>
 
-body {
-    margin: 0;
-    padding: 0;
-    background: #4a0000;
-    color: var(--gold);
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
-}
+<div class="mobile-logo-container">
+  <a href="/">
+    <img class="mobile-img" src="i.imgur.com" alt="12a1">
+  </a>
+  <div class="header-info">
+    <div class="title-header" style="color: #FF0000;">Xuân Bính Ngọ</div>
+    <div class="des-header">Mã Đáo Thành Công 2026</div>
+  </div>
+</div>
 
-/* Phần đầu trang rực rỡ */
-.hero-section {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('images.unsplash.com') no-repeat center center/cover;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+<div class="menu-mobile">
+  <a href="trangchu.html">Home</a>
+  <a href="phongtuc.html">Phong Tục</a>
+  <a href="chucmung.html">Lời Chúc</a>
+  <a href="video.html">Videos</a>
+</div>
 
-.main-title {
-    font-family: 'Great Vibes', cursive;
-    font-size: 5rem;
-    margin: 0;
-    text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
-}
+<marquee style="font-size: 20px; color: #FF0000; font-weight: 430; margin-bottom: 20px;">Chúc mừng năm mới Bính Ngọ 2026! Chúc mọi người vạn sự như ý, sức khỏe dồi dào, thăng tiến nhanh như tuấn mã, gặt hái nhiều thành công. Hãy cùng giữ gìn nét đẹp văn hóa Tết cổ truyền Việt Nam!</marquee>
 
-.zodiac-year {
-    font-size: 3rem;
-    color: #fff;
-    margin-top: -10px;
-}
+<div class="hangtb">
+  <div class="thongbao">
+    <div style="margin-top: 30px;">
+      <p style="font-size: 25px; font-weight: bold ; margin: 0;">Năm 2026</p>
+      <p style="font-size:15px; margin: 5px 0 0 0;">Bính Ngọ (Con Ngựa)</p>
+    </div>
+  </div>
+  
+  <div class="thongbao">
+    <div style="margin-top: 30px;">
+      <p style="font-size: 25px; font-weight: bold ; margin: 0;">17 Tháng 2</p>
+      <p style="font-size:15px; margin: 5px 0 0 0;">Mùng 1 Tết Nguyên Đán</p>
+    </div>
+  </div>
+</div>
 
-/* Câu đối đỏ hai bên */
-.couplets {
-    display: flex;
-    gap: 100px;
-    margin-top: 30px;
-}
+<div class="inline">
+  <h3 style="margin-left: 5px">Ý nghĩa năm mới</h3>
+</div>
 
-.couplet-item {
-    background: var(--red);
-    padding: 10px 20px;
-    border: 3px solid var(--gold);
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.5rem;
-    color: var(--gold);
-    writing-mode: vertical-rl; /* Chữ dọc */
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
-}
+<div class="div-thuctrang-mobile">
+  <div style="overflow-y: scroll; background-color: #ffffff; border-radius: 10px; width: 70%; height: 100px; margin-right: 10px; box-shadow: 2px 3px 4px rgba(0,0,0,0.1)">
+    <p style="text-indent: 20px; font-size: 15px;">Năm Bính Ngọ 2026 mang biểu tượng Tuấn Mã, tượng trưng cho sự bền bỉ và bứt phá. Đây là dịp để gia đình đoàn viên, cùng nhau nhìn lại năm cũ và đón nhận vận may mới.</p>
+  </div>
+  <img src="i.imgur.com" style="width:30%; height:120px; margin-left:auto; border-radius: 10px">
+</div>
 
-.container {
-    max-width: 1000px;
-    margin: -50px auto 50px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 40px;
-    border: 1px solid var(--gold);
-}
+<div class="div-button">
+	<a href="#"><button class="button-hdn">Gửi Lời Chúc</button></a>
+	<a href="#video"><button class="button-video">Xem Hội Xuân</button></a>
+</div>
 
-.video-wrapper iframe {
-    width: 100%;
-    height: 450px;
-    border-radius: 15px;
-    border: 4px solid var(--gold);
-}
+<div class="des-hdn">
+  <marquee style="color: red">🧧 CUNG CHÚC TÂN XUÂN - AN KHANG THỊNH VƯỢNG 🧧</marquee>
+</div>
 
-/* Cánh hoa mai rơi */
-.snowflake {
-    color: #ffc1e3; font-size: 1.5em; position: fixed; top: -10%; z-index: 1000;
-    animation: fall 12s linear infinite, sway 3s ease-in-out infinite;
-}
-@keyframes fall { 0% {top: -10%;} 100% {top: 100%;} }
-@keyframes sway { 50% {transform: translateX(100px) rotate(180deg);} }
-.snowflake:nth-child(1){left:10%; animation-delay:0s;}
-.snowflake:nth-child(2){left:40%; animation-delay:2s;}
-.snowflake:nth-child(3){left:70%; animation-delay:5s;}
+<div style="display: flex; align-items:center; margin-bottom: 10px">
+  <div class="giaiphap1"><h5>Bánh Chưng Xanh</h5><div class="img1"></div></div>
+  <div class="giaiphap2"><h5>Hoa Mai Vàng</h5><div class="img2"></div></div>
+</div>
+<div style="display: flex; align-items:center;margin-bottom: 10px;">
+  <div class="giaiphap3"><h5>Bao Lì Xì Đỏ</h5><div class="img3"></div></div>
+  <div class="giaiphap4"><h5>Mâm Ngũ Quả</h5><div class="img4"></div></div>
+</div>
+	
+<div class="div-taiche">
+  <img class="imgtaiche" src="i.imgur.com">
+  <img class="imgtaiche" src="i.imgur.com">
+  <img class="imgtaiche" src="i.imgur.com">
+  <img class="imgtaiche" src="i.imgur.com">
+  <img class="imgtaiche" src="i.imgur.com">
+  <img class="imgtaiche" src="i.imgur.com">
+</div>
+
+<div class="inline-hd"><h3 style="margin-left: 65px;">Không khí Tết xưa</h3></div>
+<div style="display: flex; margin-bottom:5px;">
+    <img style="width: 30%; height: 120px; border-radius: 10px; margin-right: 5px; box-shadow: 2px 2px 4px rgb(0,0,0,0.1);" src="i.imgur.com">
+    <div style="overflow-y: scroll; background-color: #ffffff; border-radius: 10px; width: 70%; height: 100px; margin-left:5px; box-shadow: 2px 3px 4px rgba(0,0,0,0.1);">
+    <p style="text-indent: 20px; font-size: 15px;">Hình ảnh ông đồ già bên mực tàu giấy đỏ là linh hồn của ngày Tết, lưu giữ nét chữ phượng múa rồng bay.</p>
+    </div>
+</div>
+
+<div style="display: flex;">
+  <div class="box-img"><img class="img-phongto" src="i.imgur.com"></div>
+  <div class="box-img"><img class="img-phongto" src="i.imgur.com"></div>
+  <div class="box-img"><img class="img-phongto" src="i.imgur.com"></div>
+  <div class="box-img"><img class="img-phongto" src="i.imgur.com"></div>
+</div>	
+
+<div class="inline-tiilevd"><h3 style="margin-bottom: 5px">Phim Xuân 2026</h3></div>
+<div><video id="video" class="videos" src="www.w3schools.com" autoplay controls muted></video></div>
+</body>
+</html>
