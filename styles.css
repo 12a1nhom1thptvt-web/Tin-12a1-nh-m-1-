@@ -38,11 +38,22 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive; /* Kiểu chữ uốn lượn nghệ thuật */
+    font-size: 4rem; /* Làm chữ to hơn */
+    color: #FFD700; /* Màu vàng kim rực rỡ */
     margin: 0;
-    text-shadow: 2px 2px 4px #000;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Đổ bóng mạnh để nổi bật chữ */
+    letter-spacing: 2px;
 }
 
+header p {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-top: 10px;
+    text-transform: uppercase; /* Viết hoa chữ slogan */
+}
 /* Menu điều hướng */
 nav {
     background-color: #d32f2f;
