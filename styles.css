@@ -16,7 +16,7 @@ header {
     background-position: center;
     
     /* 3. Thiết lập chiều cao */
-    height: 400px;
+    height: 600px;
     
     /* 4. Căn giữa lớp phủ (overlay) chứa chữ */
     display: flex;
