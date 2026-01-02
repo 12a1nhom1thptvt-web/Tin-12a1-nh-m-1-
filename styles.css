@@ -16,7 +16,7 @@ header {
     background-position: center;
     
     /* 3. Thiết lập chiều cao */
-    height: 350px;
+    height: 400px;
     
     /* 4. Căn giữa lớp phủ (overlay) chứa chữ */
     display: flex;
@@ -27,7 +27,7 @@ header {
 
 /* Lớp phủ để làm nổi bật chữ (Bài 11 SGK) */
 .header-overlay {
-    background-color: rgba(211, 47, 47, 0.7); /* Màu đỏ mờ */
+    background-color: rgba(255, 204, 0, 0.9); /* Màu đỏ mờ */
     padding: 30px;
     text-align: center;
     border-radius: 15px;
