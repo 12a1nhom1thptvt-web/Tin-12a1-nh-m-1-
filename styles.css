@@ -7,25 +7,34 @@ body {
     background-color: #fff5f5;
 }
 
-/* Header với bức tranh con ngựa */
 header {
-    background-image: url('con-ngua.jpg');
+    /* 1. Sửa đuôi jbg thành jpg hoặc png */
+    background-image: url('con-ngua.jpg'); 
+    
+    /* 2. Đảm bảo ảnh luôn bao phủ hết vùng header */
     background-size: cover;
     background-position: center;
+    
+    /* 3. Thiết lập chiều cao */
     height: 350px;
+    
+    /* 4. Căn giữa lớp phủ (overlay) chứa chữ */
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 5px solid #ffcc00;
 }
 
-/* Lớp phủ để làm nổi bật chữ trên nền tranh */
+/* Lớp phủ để làm nổi bật chữ (Bài 11 SGK) */
 .header-overlay {
-    background-color: rgba(211, 47, 47, 0.7);
+    background-color: rgba(211, 47, 47, 0.7); /* Màu đỏ mờ */
     padding: 30px;
     text-align: center;
     border-radius: 15px;
-    color: #ffcc00;
+    
+    /* Đảm bảo chữ bên trong có màu vàng và luôn nằm trên ảnh */
+    color: #ffcc00; 
+    z-index: 1; 
 }
 
 header h1 {
