@@ -1,90 +1,123 @@
-/* Thiết lập định dạng chung (Bài 10) */
+/* Tổng quát */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #fff9e6; /* Màu nền vàng nhạt */
-    color: #333;
+    background-color: #fff5f5;
 }
 
-/* Định dạng đầu trang (Bài 11) */
+/* Header với bức tranh con ngựa */
 header {
-    background-color: #c62828; /* Đỏ đậm */
-    color: white;
-    text-align: center;
-    padding: 30px 10px;
+    /* Hình ảnh tranh con ngựa Tết (Bạn có thể thay link ảnh khác nếu muốn) */
+    background-image: url('img.pikbest.com');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid #ffcc00;
 }
 
-/* Định dạng menu điều hướng (Bài 11) */
-nav {
-    background-color: #ffb300; /* Vàng hoa mai */
+/* Lớp phủ để làm nổi bật chữ trên nền tranh */
+.header-overlay {
+    background-color: rgba(211, 47, 47, 0.7);
+    padding: 30px;
     text-align: center;
-    padding: 10px 0;
+    border-radius: 15px;
+    color: #ffcc00;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Menu điều hướng */
+nav {
+    background-color: #d32f2f;
+    padding: 15px;
+    text-align: center;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 nav a {
-    color: #c62828;
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 0 20px;
+    margin: 0 15px;
+    padding: 5px 10px;
 }
 
 nav a:hover {
-    color: white;
-    background-color: #c62828;
+    background-color: #ffcc00;
+    color: #d32f2f;
+    border-radius: 5px;
 }
 
-/* Khung chứa nội dung */
+/* Nội dung */
 .container {
     max-width: 900px;
     margin: 20px auto;
-    background-color: white;
-    padding: 25px;
+    background: white;
+    padding: 30px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-/* Định dạng các phần nội dung (Bài 11) */
-section {
-    margin-bottom: 40px;
-    border-bottom: 1px dashed #c62828;
-}
-
-h2 {
-    color: #c62828;
-    border-left: 6px solid #ffb300;
+.title-red {
+    color: #d32f2f;
+    border-left: 5px solid #ffcc00;
     padding-left: 15px;
 }
 
-/* Định dạng Audio/Video (Bài 12) */
 .media-box {
-    background-color: #fce4ec;
+    background: #fff9e6;
     padding: 15px;
-    border-radius: 8px;
     text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
 }
 
-/* Định dạng Biểu mẫu (Bài 11) */
+/* Biểu mẫu chia sẻ */
 .form-style {
-    background-color: #fff3e0;
-    padding: 20px;
-    border: 2px solid #ffb300;
+    background-color: #fef2f2;
+    padding: 25px;
+    border: 1px solid #d32f2f;
+    border-radius: 10px;
 }
 
-input[type="submit"] {
-    background-color: #c62828;
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #d32f2f;
     color: white;
+    padding: 12px 25px;
     border: none;
-    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
 }
 
-/* Định dạng chân trang (Bài 10) */
+button:hover {
+    background-color: #b71c1c;
+}
+
+/* Chân trang */
 footer {
-    text-align: center;
     background-color: #333;
-    color: #ffd700;
-    padding: 20px 0;
+    color: white;
+    text-align: center;
+    padding: 25px;
 }
