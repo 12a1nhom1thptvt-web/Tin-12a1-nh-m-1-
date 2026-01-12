@@ -2,153 +2,110 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông Điệp Tình Yêu</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #fce4ec; /* Light pink background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            overflow: hidden; /* Hide body scroll when modal is open */
-        }
-
-        /* The Letter Icon */
-        .letter-icon {
-            font-size: 500px;
-            cursor: pointer;
-            color: #e91e63; /* Pink color for the letter */
-            transition: transform 0.3s ease;
-        }
-
-        .letter-icon:hover {
-            transform: scale(1.1);
-        }
-
-        /* The Modal (Pop-up window) */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            background-color: rgba(0,0,0,0.6); /* Black background with opacity */
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Modal Content (The opened letter/message box) */
-        .modal-content {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 600px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            position: relative;
-            transform: scale(0.8);
-            animation: openModal 0.4s forwards;
-        }
-
-        @keyframes openModal {
-            to {
-                transform: scale(1);
-            }
-        }
-
-        /* The Close Button */
-        .close {
-            color: #aaa;
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #e91e63;
-        }
-
-        /* Image styling within the modal */
-        .modal-image {
-            max-width: 50%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #e91e63;
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 1.1em;
-            line-height: 1.5;
-            color: #4a4a4a;
-        }
-    </style>
+    <title>Tết Bính Ngọ 2026 - Truyền Thống Và Hiện Đại</title>
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- The Letter Icon -->
-    <div class="letter-icon" onclick="openModal()">
-        ✉️ <!-- You can use a real image of a letter here if you like -->
-    </div>
-
-    <!-- The Modal/Pop-up -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            
-            <h2>Chúc Mừng Sinh Nhật Em Yêu!</h2>
-            
-            <!-- THAY THẾ 'your_image_file.jpg' BẰNG TÊN FILE ẢNH THỰC TẾ CỦA BẠN -->
-            <!-- Đặt tên file ảnh là 'anh_ban_gai.jpg' -->
-            <img src="646289345057219941.jpg" alt="Ảnh bạn gái xinh đẹp" class="modal-image">
-            
-            <p>
-                "Chúc mừng sinh nhật công chúa của anh! Mong rằng tuổi mới sẽ mang đến cho em thật nhiều niềm vui, sự rạng rỡ và hạnh phúc. Anh sẽ luôn ở bên cạnh để cùng em viết tiếp những chương thật đẹp trong hành trình này."
-            </p>
-            <p>
-                Yêu em rất nhiều! ❤️
-            </p>
+    <header>
+        <div class="header-overlay">
+            <h1>TẾT NGUYÊN ĐÁN BÍNH NGỌ 2026</h1>
+            <p>Gìn giữ bản sắc - Kết nối tương lai</p>
         </div>
+    </header>
+    <nav>
+        <a href="#trangchu">Trang Chủ</a>
+        <a href="#phongtuc">Phong Tục</a>
+        <a href="#ketnoi">Kết Nối Hiện Đại</a>
+        <a href="#chiase">Chia Sẻ Khoảnh Khắc</a>
+        <a> một số hoạt động </a>
+    </nav>
+    <div class="container">
+        <section id="trangchu">
+            <h2 class="title-red">1. TRANG CHỦ</h2>
+            <p>Tết Nguyên Đán là lễ hội truyền thống quan trọng nhất của người Việt. Đây là dịp gìn giữ và phát huy bản sắc văn hóa dân tộc, thể hiện lòng biết ơn tổ tiên và đạo lý <strong>“uống nước nhớ nguồn”</strong>. Tết cũng là thời điểm gia đình sum họp, gắn kết tình cảm giữa các thế hệ, đồng thời khơi dậy tinh thần lạc quan, hướng tới khởi đầu mới tốt đẹp trong năm mới.</p>
+            
+            <div class="media-box">
+                <p><strong>Lắng nghe giai điệu mùa xuân:</strong></p>
+                <audio controls>
+                    <source src="Tet-la-tet.mp3" type="audio/mpeg">
+                     <source src="Xuan-Da_Ve.mp3" type="audio/mpeg">
+                    <source src="chuyencuminhboqua.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </section>
+        <section id="phongtuc">
+            <h2 class="title-red">2. CÁC PHONG TỤC TẬP QUÁN</h2>
+            
+            <div class="custom-item">
+                <h3>2.1) Lì xì (mừng tuổi)</h3>
+                <p>Lì xì không chỉ là một nghi thức, mà còn là nhịp cầu kết nối tình cảm giữa các thế hệ. Những phong bao đỏ thắm rực rỡ tượng trưng cho sự may mắn, cát tường, như một lời chúc "vạn sự như ý" được trao tận tay. Với trẻ nhỏ, tiền lì xì là lời động viên ngoan ngoãn, học hành tấn tới; với người già, đó là lời cầu chúc bách niên giai lão, vui vầy cùng con cháu. Ý nghĩa của lì xì nằm ở tấm lòng và lời chúc tốt đẹp, nơi giá trị tinh thần vượt xa mọi con số vật chất, làm ấm lòng người trong những ngày đầu năm mới.</p>
+            </div>
+            <div class="custom-item">
+                <h3>2.2) Chúc Tết</h3>
+<p>Chúc Tết là nét đẹp văn hóa đậm đà tính nhân văn, là dịp để mỗi người bày tỏ sự biết ơn và lòng kính trọng đối với ông bà, cha mẹ, thầy cô và những người thân thiết. Những lời chúc đầu xuân không đơn thuần là xã giao, mà là những "hạt giống" hy vọng về một năm mới an khang, thịnh vượng và hạnh phúc. Trong không gian nồng đượm mùi hương trầm và trà ấm, những câu chúc chân thành giúp xóa nhòa khoảng cách, thắt chặt tình thân và lan tỏa năng lượng tích cực, tạo nên sợi dây liên kết cộng đồng bền chặt của người Việt.</p>
+            </div>
+
+            <div class="custom-item">
+                <h3>2.3) Dọn dẹp, trang trí nhà cửa đón Tết</h3>
+                <p>Dọn dẹp nhà cửa trước Tết là một cuộc "thanh lọc" cả về không gian sống lẫn tinh thần. Việc lau chùi từng góc nhỏ, vứt bỏ những món đồ cũ hỏng mang ý nghĩa gạt đi những muộn phiền, không may của năm cũ để sẵn sàng đón nhận sinh khí mới. Khi ngôi nhà trở nên tinh tươm, người Việt bắt đầu nghệ thuật trang hoàng với sắc đỏ của câu đối, sắc thắm của hoa đào miền Bắc hay sắc vàng rực rỡ của hoa mai miền Nam. Sự hiện diện của mâm ngũ quả, chậu cây cảnh hay những dải đèn lung linh không chỉ làm bừng sáng không gian mà còn thể hiện khát vọng về một cuộc sống sung túc, tươi đẹp và rạng rỡ như chính sắc xuân đang về.</p>
+            </div>
+            <div class="media-box">
+                <p><strong>Video không khí chuẩn bị Tết:</strong></p>
+                <video controls width="100%">
+                    <source src="www.w3schools.com" type="video/mp4">
+                    Trình duyệt không hỗ trợ video.
+                                    </video>
+            </div>
+        </section>
+        <section id="ketnoi">
+            <h2 class="title-red">3. Kết nối truyền thống với cuộc sống hiện đại</h2>
+            <p>Trong nhịp sống ngày nay, Tết không ngừng đổi mới để phù hợp với xã hội hiện đại, nhưng vẫn giữ trọn những giá trị truyền thống cốt lõi của dân tộc Việt Nam.</p>
+            <div class="modern-box">
+                <p><strong>🌸 Chúc Tết thời đại số</strong><br>
+                Slogan: <em>Xa mặt – không cách lòng</em><br>
+                Chúc Tết qua tin nhắn, mạng xã hội và cuộc gọi video giúp kết nối gia đình, bạn bè dù ở bất cứ đâu.</p>
+                <p><strong>🧧 Lì xì hiện đại</strong><br>
+                Slogan: <em>Hình thức mới – ý nghĩa không đổi</em><br>
+                Lì xì điện tử mang đến sự tiện lợi, nhanh chóng, nhưng vẫn gửi gắm lời chúc may mắn, bình an.</p>
+<p><strong>🤝 Lan tỏa Tết Việt</strong><br>
+                Slogan: <em>Một chia sẻ – ngàn kết nối</em><br>
+                Hình ảnh, video và câu chuyện Tết trên nền tảng số góp phần quảng bá văn hóa Tết Việt.</p>
+            </div>
+            <p><strong>Tổng kết:</strong> Tết Nguyên Đán là sự giao thoa hài hòa giữa truyền thống và hiện đại, giúp giá trị văn hóa dân tộc tiếp tục được gìn giữ và lan tỏa.</p>
+        </section>
+        <section id="chiase">
+            <div class="form-style">
+                <h2 class="title-red">✨ Vì sao bạn nên chia sẻ?</h2>
+                <ul>
+                    <li>Ghi lại khoảnh khắc Tết ý nghĩa của riêng mình</li>
+                    <li>Kết nối với những người cùng chung cảm xúc</li>
+                    <li>Lưu giữ dấu ấn Tết theo cách hiện đại</li>
+                    <li>Góp phần lan tỏa giá trị văn hóa Tết Việt</li>
+                </ul>
+                <h3>BIỂU MẪU CHIA SẺ</h3>
+                <form action="#">
+                    <label>Họ và tên hoặc biệt danh:</label>
+                    <input type="text" placeholder="(Không bắt buộc)">
+                    <label>Lựa chọn nội dung chia sẻ:</label>
+                    <select>
+                        <option>Kỷ niệm Tết</option>
+                        <option>Kế hoạch Tết</option>
+                    </select>
+                    <label>Nội dung chia sẻ:</label>
+                    <textarea rows="4" placeholder="Trình bày cảm xúc, hoạt động hoặc dự định của bạn..."></textarea>
+                    <label>Hình ảnh minh họa:</label>
+                    <input type="file">
+                    <label>Lời chúc năm mới gửi đến mọi người:</label>
+                    <input type="text" placeholder="Nhập lời chúc của bạn...">
+                    <button type="submit">Gửi thông điệp</button>
+                </form>
+            </div>
+        </section>
     </div>
-
-    <script>
-        // Get the modal element
-        var modal = document.getElementById("myModal");
-
-        // Function to open the modal
-        function openModal() {
-            modal.style.display = "flex";
-        }
-
-        // Function to close the modal
-        function closeModal() {
-            modal.style.display = "none";
-        }
-
-        // Close the modal if the user clicks anywhere outside of the modal content
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-    </script>
-
+    <footer>
+        <p><strong>Thông điệp:</strong> Tết là khi yêu thương được sẻ chia - Tết là khoảnh khắc cả nhà bên nhau.</p>
+        <p>&copy; 2026 - Trang web chào Xuân Bính Ngọ</p>
+    </footer>
 </body>
 </html>
