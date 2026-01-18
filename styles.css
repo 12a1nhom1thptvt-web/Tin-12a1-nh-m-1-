@@ -163,47 +163,27 @@ footer {
     border: 2px solid #ffcc00;
     margin-top: 20px;
 }
-/* Container cho menu thả xuống */
+/* Container cho dropdown, cần thiết lập position: relative để định vị nội dung ẩn */
 .dropdown {
     position: relative;
-    display: inline-block;
-    padding: 0 10px;
+    display: inline-block; /* Hoặc block, tùy thuộc vào layout của bạn */
 }
 
-/* Nội dung ẩn của menu (mặc định là ẩn) */
+/* Nội dung của dropdown (các hoạt động Tết) */
 .dropdown-content {
-    display: none; /* Lệnh ẩn chính */
+    /* Mặc định ẩn nội dung */
+    display: none;
+    
+    /* Định vị tuyệt đối để nó chồng lên các nội dung khác */
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 101; 
-    border-radius: 5px;
-    padding: 10px 0;
-}
-
-/* Hiển thị nội dung khi rê chuột vào khối cha */
-.dropdown:hover .dropdown-content {
-    display: block; /* Lệnh hiện khi rê chuột */
-}
-
-/* Định dạng các liên kết con */
-.dropdown-content a {
-    color: black;
     padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    margin: 0;
+    z-index: 1;
 }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-/* Con trỏ chuột */
-.dropdown label {
-    cursor: pointer;
-    color: #c62828;
-    padding: 5px 0;
+/* Quy tắc hiển thị nội dung khi rê chuột vào container chính (.dropdown) */
+.dropdown:hover .dropdown-content {
+    display: block; /* Hiển thị nội dung khi hover */
 }
