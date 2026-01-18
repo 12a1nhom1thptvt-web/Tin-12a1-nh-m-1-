@@ -100,7 +100,13 @@ nav a:hover {
     border-radius: 10px;
     margin: 20px 0;
 }
-
+.img-lixi-custom {
+    width: 200px; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    display: block;
+    margin: 15px 0 20px 15px;
 /* Biểu mẫu chia sẻ */
 .form-style {
     background-color: #fef2f2;
