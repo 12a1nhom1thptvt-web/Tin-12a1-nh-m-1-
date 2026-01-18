@@ -115,7 +115,7 @@ nav a:hover {
     border-radius: 10px;
 }
 
-input, select, textarea {
+input, textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -139,12 +139,21 @@ button:hover {
     background-color: #b71c1c;
 }
 
-/* Chân trang */
+/* --- 6. Chân trang --- */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 25px;
+    margin-top: 50px;
+}
+
+/* --- 7. Responsive Mobile --- */
+@media only screen and (max-width: 768px) {
+    header { height: 300px; }
+    header h1 { font-size: 2rem; }
+    .container { padding: 15px; width: 95%; }
+    .img-lixi-custom { width: 150px; }
 }
 .videos {
     width: 100%;
