@@ -107,6 +107,7 @@ nav a:hover {
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     display: block;
     margin: 15px 0 20px 15px;
+}
 /* Biểu mẫu chia sẻ */
 .form-style {
     background-color: #fef2f2;
@@ -163,47 +164,67 @@ footer {
     border: 2px solid #ffcc00;
     margin-top: 20px;
 }
-/* Container cho menu thả xuống */
+
+
+/* --- Quy tắc hiển thị cho Menu thả xuống --- */
+
+/* 1. Container cho menu */
 .dropdown {
     position: relative;
     display: inline-block;
-    padding: 0 10px;
 }
 
-/* Nội dung ẩn của menu (mặc định là ẩn) */
+/* 2. Định dạng nhãn/nút kích hoạt menu */
+.dropdown label, .dropdown > a {
+    cursor: pointer;
+    color: white; /* Đổi thành trắng để khớp với thanh điều hướng */
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* 3. Nội dung menu ẩn mặc định */
 .dropdown-content {
-    display: none; /* Lệnh ẩn chính */
+    display: none; 
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 101; 
-    border-radius: 5px;
-    padding: 10px 0;
+    background-color: #ffffff; /* Nền trắng cho menu con */
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000; 
+    border-radius: 4px;
+    top: 100%; /* Xuất hiện ngay dưới mục cha */
+    left: 0;
 }
 
-/* Hiển thị nội dung khi rê chuột vào khối cha */
+/* 4. QUY TẮC QUAN TRỌNG: Hiển thị khi di chuột */
 .dropdown:hover .dropdown-content {
-    display: block; /* Lệnh hiện khi rê chuột */
+    display: block;
+    animation: fadeIn 0.3s; /* Thêm hiệu ứng hiện ra mượt mà */
 }
 
-/* Định dạng các liên kết con */
+/* 5. Định dạng các liên kết bên trong menu con */
 .dropdown-content a {
-    color: black;
+    color: #333 !important; /* Ép màu chữ tối trên nền trắng */
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
     margin: 0;
+    border-bottom: 1px solid #eee;
+    font-weight: normal;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #ffcc00 !important;
+    color: #d32f2f !important;
 }
 
-/* Con trỏ chuột */
-.dropdown label {
-    cursor: pointer;
-    color: #c62828;
-    padding: 5px 0;
+/* Hiệu ứng mượt mà */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
