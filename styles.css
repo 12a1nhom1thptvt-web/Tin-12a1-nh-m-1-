@@ -180,8 +180,8 @@ footer {
     font-size: 1rem; 
     color: white; 
     text-decoration: none;
-    margin: 0 15px;      /* Khoảng cách giống 'nav a' của bạn */
-    padding: 5px 10px;   /* Padding giống 'nav a' của bạn */
+    margin: 0 15px;      
+    padding: 5px 10px;   
     cursor: pointer;
     display: inline-block;
 }
