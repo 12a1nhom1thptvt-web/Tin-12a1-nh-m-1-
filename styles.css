@@ -164,67 +164,65 @@ footer {
     border: 2px solid #ffcc00;
     margin-top: 20px;
 }
+/* --- PHẦN MENU THẢ XUỐNG ĐÃ CHỈNH SỬA ĐỒNG NHẤT --- */
 
-
-/* --- Quy tắc hiển thị cho Menu thả xuống --- */
-
-/* 1. Container cho menu */
+/* 1. Khối bao quanh mục "Hoạt động ngày Tết" */
 .dropdown {
     position: relative;
     display: inline-block;
+    vertical-align: middle; /* Giúp căn hàng chuẩn với các mục nav a khác */
 }
 
-/* 2. Định dạng nhãn/nút kích hoạt menu */
+/* 2. Chỉnh chữ "Hoạt động ngày Tết" giống hệt 'nav a' */
 .dropdown label, .dropdown > a {
-    cursor: pointer;
-    color: white; /* Đổi thành trắng để khớp với thanh điều hướng */
+    font-family: 'Arial', sans-serif;
     font-weight: bold;
-    padding: 10px 15px;
+    font-size: 1rem; 
+    color: white; 
+    text-decoration: none;
+    margin: 0 15px;      /* Khoảng cách giống 'nav a' của bạn */
+    padding: 5px 10px;   /* Padding giống 'nav a' của bạn */
+    cursor: pointer;
     display: inline-block;
 }
 
-/* 3. Nội dung menu ẩn mặc định */
+/* 3. Hiệu ứng hover cho mục cha (giống nav a:hover) */
+.dropdown:hover label, .dropdown:hover > a {
+    background-color: #ffcc00;
+    color: #d32f2f;
+    border-radius: 5px;
+}
+
+/* 4. Nội dung menu con khi xổ xuống */
 .dropdown-content {
-    display: none; 
+    display: none;
     position: absolute;
-    background-color: #ffffff; /* Nền trắng cho menu con */
+    background-color: #ffffff;
     min-width: 180px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1000; 
-    border-radius: 4px;
-    top: 100%; /* Xuất hiện ngay dưới mục cha */
-    left: 0;
+    z-index: 101;
+    border-radius: 5px;
+    top: 100%;
+    left: 15px; /* Căn lề khớp với vị trí chữ mục cha */
 }
 
-/* 4. QUY TẮC QUAN TRỌNG: Hiển thị khi di chuột */
+/* 5. Hiển thị menu khi rê chuột */
 .dropdown:hover .dropdown-content {
     display: block;
-    animation: fadeIn 0.3s; /* Thêm hiệu ứng hiện ra mượt mà */
 }
 
-/* 5. Định dạng các liên kết bên trong menu con */
+/* 6. Các liên kết bên trong menu con */
 .dropdown-content a {
-    color: #333 !important; /* Ép màu chữ tối trên nền trắng */
-    padding: 12px 16px;
+    color: #333 !important; /* Màu chữ tối để nổi bật trên nền trắng */
+    padding: 10px 15px;
     text-decoration: none;
     display: block;
     text-align: left;
-    margin: 0;
-    border-bottom: 1px solid #eee;
-    font-weight: normal;
-}
-
-.dropdown-content a:last-child {
-    border-bottom: none;
+    font-weight: normal; /* Menu con để chữ thường cho thanh thoát */
+    margin: 0; /* Ghi đè margin 15px của nav a */
 }
 
 .dropdown-content a:hover {
-    background-color: #ffcc00 !important;
+    background-color: #f1f1f1 !important;
     color: #d32f2f !important;
-}
-
-/* Hiệu ứng mượt mà */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
 }
