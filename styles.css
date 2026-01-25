@@ -9,7 +9,7 @@ body {
 
 header {
     /* 1. Sửa đuôi jbg thành jpg hoặc png */
-    background-image: url('con-ngua.jpg'); 
+    background-image: url('img/con-ngua.jpg'); 
     
     /* 2. Đảm bảo ảnh luôn bao phủ hết vùng header */
     background-size: cover;
