@@ -1,4 +1,53 @@
-/* ===== NAVIGATION - SÁT NHƯNG KHÔNG CUỘN LÊN ===== */
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to bottom, #fff8f8, #fff);
+}
+
+/* ===== HEADER - TIÊU ĐỀ 1 DÒNG (CHỈ SỬA PHẦN NÀY) ===== */
+header {
+    background: linear-gradient(rgba(139, 0, 0, 0.85), rgba(178, 34, 34, 0.9)), 
+                url('img/con-ngua.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.header-overlay {
+    max-width: 95%;
+    padding: 1.5rem;
+}
+
+.header-overlay h1 {
+    font-size: 2.2rem;
+    color: #FFD700;
+    margin-bottom: 0.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 1rem;
+}
+
+.header-overlay p {
+    font-size: 1.2rem;
+    color: white;
+    font-style: italic;
+}
+
+/* ===== NAVIGATION - SÁT NHƯNG KHÔNG CUỘN LÊN (CHỈ SỬA PHẦN NÀY) ===== */
 nav {
     background: #8b0000;
     padding: 0;
@@ -14,7 +63,6 @@ nav {
     min-height: 50px;
 }
 
-/* Tất cả item trong nav đều có chiều cao bằng nhau */
 nav a, .dropdown label {
     color: white;
     text-decoration: none;
@@ -31,7 +79,6 @@ nav a, .dropdown label {
     background: transparent;
 }
 
-/* Tạo khoảng cách bằng padding thay vì gap */
 nav > a {
     padding: 0 20px;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -41,7 +88,6 @@ nav > a:first-child {
     border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Hiệu ứng hover - chỉ đổi màu nền */
 nav a:hover, .dropdown:hover label {
     background: #FFD700;
     color: #8b0000;
@@ -64,7 +110,6 @@ nav a:hover, .dropdown:hover label {
     height: 100%;
 }
 
-/* DROPDOWN CONTENT - SÁT VỚI NAV */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -72,7 +117,7 @@ nav a:hover, .dropdown:hover label {
     min-width: 200px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
     border-radius: 0 0 4px 4px;
-    top: 100%; /* Sát ngay dưới nav */
+    top: 100%;
     left: 0;
     border: 1px solid #ddd;
     border-top: none;
@@ -104,8 +149,168 @@ nav a:hover, .dropdown:hover label {
     color: white;
 }
 
-/* Responsive */
+/* ===== CONTAINER & SECTIONS - GIỮ NGUYÊN NHƯ CŨ ===== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    background: white;
+    margin: 1.5rem 0;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #8b0000;
+}
+
+.title-red {
+    color: #8b0000;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #FFD700;
+}
+
+/* ===== CUSTOM ITEMS - GIỮ NGUYÊN ===== */
+.custom-item {
+    margin: 2rem 0;
+}
+
+.custom-item img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 1rem auto;
+    border: 1px solid #ddd;
+}
+
+.custom-item p.caption,
+.custom-item p[style*="text-align: center"] {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* ===== VIDEO - GIỮ NGUYÊN ===== */
+.videos {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    display: block;
+    margin: 1rem auto;
+    border: 2px solid #8b0000;
+}
+
+/* ===== MEDIA BOX - GIỮ NGUYÊN ===== */
+.media-box {
+    background: #fff9e6;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    border: 1px solid #FFD700;
+}
+
+.modern-box {
+    background: #f0fff0;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    border: 1px solid #8b0000;
+}
+
+/* ===== FORM - GIỮ NGUYÊN ===== */
+.form-style {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid #8b0000;
+}
+
+.form-style label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #8b0000;
+    font-weight: 500;
+}
+
+.form-style input,
+.form-style select,
+.form-style textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.form-style button {
+    background: #8b0000;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 1rem auto;
+}
+
+.form-style button:hover {
+    background: #b22222;
+}
+
+/* ===== FOOTER - TỐI GIẢN (CHỈ SỬA PHẦN NÀY) ===== */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid #FFD700;
+    border-radius: 4px;
+}
+
+footer a:hover {
+    background: #FFD700;
+    color: #333;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+    /* Header responsive */
+    .header-overlay h1 {
+        font-size: 1.6rem;
+        white-space: normal;
+        line-height: 1.3;
+    }
+    
+    .header-overlay p {
+        font-size: 1rem;
+    }
+    
+    /* Nav responsive */
     nav {
         flex-wrap: wrap;
         min-height: auto;
@@ -130,4 +335,37 @@ nav a:hover, .dropdown:hover label {
         border-radius: 4px;
         border-top: 1px solid #ddd;
     }
+    
+    /* Container giữ nguyên */
+    .container {
+        padding: 1rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-overlay h1 {
+        font-size: 1.4rem;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    nav a, .dropdown label {
+        text-align: center;
+        margin: 0.2rem 0;
+        border: none !important;
+    }
+}
+
+/* ===== AUDIO - GIỮ NGUYÊN ===== */
+audio {
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem 0;
 }
