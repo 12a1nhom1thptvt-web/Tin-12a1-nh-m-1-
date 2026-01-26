@@ -1,4 +1,4 @@
-/* Tổng quát */
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.7;
@@ -8,24 +8,24 @@ body {
 }
 
 header {
-    /* 1. Sửa đuôi jbg thành jpg hoặc png */
+    
     background-image: url('img/con-ngua.jpg'); 
     
-    /* 2. Đảm bảo ảnh luôn bao phủ hết vùng header */
+    
     background-size: cover;
     background-position: center;
     
-    /* 3. Thiết lập chiều cao */
+    
     height: 600px;
     
-    /* 4. Căn giữa lớp phủ (overlay) chứa chữ */
+    
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 5px solid #ffcc00;
 }
 
-/* Lớp phủ để làm nổi bật chữ (Bài 11 SGK) */
+
 .header-overlay {
     background-color: rgba(139, 0, 0, 0.85); /* Màu đỏ mờ */
     padding: 30px;
@@ -54,7 +54,7 @@ header p {
     margin-top: 10px;
     text-transform: uppercase; /* Viết hoa chữ slogan */
 }
-/* Menu điều hướng */
+
 nav {
     background-color: #d32f2f;
     padding: 15px;
@@ -78,7 +78,7 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* Nội dung */
+
 .container {
     max-width: 900px;
     margin: 20px auto;
@@ -108,7 +108,7 @@ nav a:hover {
     display: block;
     margin: 15px 0 20px 15px;
 }
-/* Biểu mẫu chia sẻ */
+
 .form-style {
     background-color: #fef2f2;
     padding: 25px;
@@ -164,16 +164,16 @@ footer {
     border: 2px solid #ffcc00;
     margin-top: 20px;
 }
-/* --- PHẦN MENU THẢ XUỐNG ĐÃ CHỈNH SỬA ĐỒNG NHẤT --- */
 
-/* 1. Khối bao quanh mục "Hoạt động ngày Tết" */
+
+
 .dropdown {
     position: relative;
     display: inline-block;
     vertical-align: middle; /* Giúp căn hàng chuẩn với các mục nav a khác */
 }
 
-/* 2. Chỉnh chữ "Hoạt động ngày Tết" giống hệt 'nav a' */
+
 .dropdown label, .dropdown > a {
     font-family: 'Arial', sans-serif;
     font-weight: bold;
@@ -186,14 +186,14 @@ footer {
     display: inline-block;
 }
 
-/* 3. Hiệu ứng hover cho mục cha (giống nav a:hover) */
+
 .dropdown:hover label, .dropdown:hover > a {
     background-color: #ffcc00;
     color: #d32f2f;
     border-radius: 5px;
 }
 
-/* 4. Nội dung menu con khi xổ xuống */
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -206,12 +206,12 @@ footer {
     left: 15px; /* Căn lề khớp với vị trí chữ mục cha */
 }
 
-/* 5. Hiển thị menu khi rê chuột */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* 6. Các liên kết bên trong menu con */
+
 .dropdown-content a {
     color: #333 !important; /* Màu chữ tối để nổi bật trên nền trắng */
     padding: 10px 15px;
