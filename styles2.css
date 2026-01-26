@@ -1,106 +1,67 @@
-/* ===== RESET & BASE ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(to bottom, #fff8f8, #fff);
-}
-
-/* ===== HEADER - TIÊU ĐỀ 1 DÒNG ===== */
-header {
-    background: linear-gradient(rgba(139, 0, 0, 0.85), rgba(178, 34, 34, 0.9)), 
-                url('img/con-ngua.jpg') no-repeat center center;
-    background-size: cover;
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1.5rem;
-}
-
-.header-overlay {
-    max-width: 95%;
-    padding: 1.5rem;
-}
-
-/* TIÊU ĐỀ TRÊN 1 DÒNG */
-.header-overlay h1 {
-    font-size: 2.2rem;
-    color: #FFD700;
-    margin-bottom: 0.8rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 0 1rem;
-}
-
-.header-overlay p {
-    font-size: 1.2rem;
-    color: white;
-    font-style: italic;
-}
-
-/* ===== NAVIGATION - DROPDOWN SÁT ===== */
+/* ===== NAVIGATION - SÁT NHƯNG KHÔNG CUỘN LÊN ===== */
 nav {
     background: #8b0000;
-    padding: 0.8rem;
+    padding: 0;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+    align-items: stretch;
+    gap: 0;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    overflow-x: auto;
+    min-height: 50px;
 }
 
-nav a {
+/* Tất cả item trong nav đều có chiều cao bằng nhau */
+nav a, .dropdown label {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 0;
     font-weight: 500;
     transition: all 0.2s;
     white-space: nowrap;
     flex-shrink: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
 }
 
-nav a:hover {
+/* Tạo khoảng cách bằng padding thay vì gap */
+nav > a {
+    padding: 0 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav > a:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hiệu ứng hover - chỉ đổi màu nền */
+nav a:hover, .dropdown:hover label {
     background: #FFD700;
     color: #8b0000;
 }
 
-/* ===== DROPDOWN - SÁT VÀ GỌN ===== */
+/* ===== DROPDOWN - SÁT VÀ KHÔNG CÓ KHOẢNG CÁCH ===== */
 .dropdown {
     position: relative;
-    display: inline-block;
-    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 50px;
 }
 
 .dropdown label {
-    color: white;
+    padding: 0 20px;
     cursor: pointer;
-    padding: 0.5rem 1rem;
-    display: block;
-    background: rgba(255, 215, 0, 0.2);
-    border-radius: 4px;
-    font-weight: 500;
-    white-space: nowrap;
-    transition: all 0.2s;
-}
-
-.dropdown:hover label {
-    background: rgba(255, 215, 0, 0.4);
+    margin: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 100%;
 }
 
 /* DROPDOWN CONTENT - SÁT VỚI NAV */
@@ -108,13 +69,13 @@ nav a:hover {
     display: none;
     position: absolute;
     background: white;
-    min-width: 180px;
+    min-width: 200px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    border-radius: 4px;
-    top: 100%;
+    border-radius: 0 0 4px 4px;
+    top: 100%; /* Sát ngay dưới nav */
     left: 0;
-    margin-top: 0;
     border: 1px solid #ddd;
+    border-top: none;
     z-index: 1000;
 }
 
@@ -125,11 +86,17 @@ nav a:hover {
 .dropdown-content a {
     color: #333;
     display: block;
-    padding: 0.7rem 1rem;
+    padding: 12px 16px;
     border-bottom: 1px solid #eee;
     text-decoration: none;
     transition: all 0.2s;
     white-space: nowrap;
+    height: auto;
+    justify-content: flex-start;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
 }
 
 .dropdown-content a:hover {
@@ -137,180 +104,20 @@ nav a:hover {
     color: white;
 }
 
-/* ===== CONTAINER & SECTIONS ===== */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1.5rem;
-}
-
-section {
-    background: white;
-    margin: 1.5rem 0;
-    padding: 1.8rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    border-left: 4px solid #8b0000;
-}
-
-.title-red {
-    color: #8b0000;
-    font-size: 1.7rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #FFD700;
-}
-
-/* ===== CUSTOM ITEMS ===== */
-.custom-item {
-    margin: 1.8rem 0;
-}
-
-.custom-item img {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    border-radius: 6px;
-    display: block;
-    margin: 1rem auto;
-    border: 1px solid #ddd;
-}
-
-.custom-item p.caption,
-.custom-item p[style*="text-align: center"] {
-    text-align: center;
-    color: #666;
-    font-style: italic;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-}
-
-/* ===== VIDEO ===== */
-.videos {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    aspect-ratio: 16/9;
-    border-radius: 6px;
-    display: block;
-    margin: 1rem auto;
-    border: 2px solid #8b0000;
-}
-
-/* ===== MEDIA BOX ===== */
-.media-box {
-    background: #fff9e6;
-    padding: 1.5rem;
-    border-radius: 6px;
-    margin: 1.5rem 0;
-    border: 1px solid #FFD700;
-}
-
-.modern-box {
-    background: #f0fff0;
-    padding: 1.5rem;
-    border-radius: 6px;
-    margin: 1.5rem 0;
-    border: 1px solid #8b0000;
-}
-
-/* ===== FORM ===== */
-.form-style {
-    background: #fff;
-    padding: 1.8rem;
-    border-radius: 8px;
-    border: 2px solid #8b0000;
-}
-
-.form-style label {
-    display: block;
-    margin: 1rem 0 0.5rem;
-    color: #8b0000;
-    font-weight: 500;
-}
-
-.form-style input,
-.form-style select,
-.form-style textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-}
-
-.form-style button {
-    background: #8b0000;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 200px;
-    display: block;
-    margin: 1rem auto;
-}
-
-.form-style button:hover {
-    background: #b22222;
-}
-
-/* ===== FOOTER - TỐI GIẢN ===== */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1.8rem 1rem;
-    margin-top: 3rem;
-}
-
-footer p {
-    margin: 0.5rem 0;
-}
-
-footer a {
-    color: #FFD700;
-    text-decoration: none;
-    display: inline-block;
-    margin: 1rem 0.5rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid #FFD700;
-    border-radius: 4px;
-}
-
-footer a:hover {
-    background: #FFD700;
-    color: #333;
-}
-
-/* ===== RESPONSIVE ===== */
+/* Responsive */
 @media (max-width: 768px) {
-    .header-overlay h1 {
-        font-size: 1.6rem;
-        white-space: normal;
-        line-height: 1.3;
-    }
-    
-    .header-overlay p {
-        font-size: 1rem;
-    }
-    
     nav {
         flex-wrap: wrap;
-        gap: 0.8rem;
-        padding: 0.6rem;
+        min-height: auto;
     }
     
-    nav a {
-        padding: 0.4rem 0.8rem;
+    nav > a, .dropdown label {
+        height: 45px;
+        padding: 0 15px;
         font-size: 0.9rem;
-    }
-    
-    .dropdown label {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
     }
     
     .dropdown-content {
@@ -320,42 +127,7 @@ footer a:hover {
         transform: translateX(-50%);
         width: 90%;
         max-width: 300px;
+        border-radius: 4px;
+        border-top: 1px solid #ddd;
     }
-    
-    .container {
-        padding: 1rem;
-    }
-    
-    section {
-        padding: 1.2rem;
-    }
-}
-
-/* Responsive cho màn hình rất nhỏ */
-@media (max-width: 480px) {
-    .header-overlay h1 {
-        font-size: 1.4rem;
-    }
-    
-    nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    nav a, .dropdown label {
-        text-align: center;
-        margin: 0.2rem 0;
-    }
-}
-
-/* ===== AUDIO ===== */
-audio {
-    width: 100%;
-    max-width: 300px;
-    margin: 1rem 0;
-}
-
-/* ===== UTILITIES ===== */
-.nowrap {
-    white-space: nowrap;
 }
